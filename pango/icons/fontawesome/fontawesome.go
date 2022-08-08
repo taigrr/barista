@@ -49,14 +49,17 @@ func Load(repoPath string) error {
 
 	// Defaults to solid since that style has the most icons available.
 	faSolid := icons.NewProvider("fa")
-	faSolid.Font("Font Awesome 5 Free")
+	faSolid.Font("Font Awesome 6 Free")
 	faSolid.AddStyle(func(n *pango.Node) { n.Weight(900) })
 
 	faBrands := icons.NewProvider("fab")
-	faBrands.Font("Font Awesome 5 Brands")
+	faBrands.Font("Font Awesome 6 Brands")
 
 	faRegular := icons.NewProvider("far")
-	faRegular.Font("Font Awesome 5 Free")
+	faRegular.Font("Font Awesome 6 Free")
+
+	faCompat := icons.NewProvider("fac")
+	faCompat.Font("Font Awesome v4 Compatibility")
 
 	styles := map[string]*icons.Provider{
 		"solid":   faSolid,
